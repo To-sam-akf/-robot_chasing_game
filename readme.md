@@ -24,7 +24,7 @@
 
 本项目的核心是“端云协同”的分布式架构，将计算与渲染分离：
 
-```mermaid
+```
 graph TD
     subgraph Atlas开发板 (计算端/服务端)
         A[摄像头] --> B{Python应用: main.py};
