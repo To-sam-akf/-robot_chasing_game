@@ -24,8 +24,6 @@
 
 本项目的核心是“端云协同”的分布式架构，将计算与渲染分离：
 
-![技术架构图](assets/architecture.png)
-
 ```mermaid
 graph TD
     subgraph Atlas开发板 (计算端/服务端)
