@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于项目</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div class="container">
+        <h1>手势控制3D机器人项目</h1>
+        
+        <p>
+            欢迎来到这个项目的介绍页面！本项目是一个结合了嵌入式硬件、计算机视觉和Web 3D技术的创意实践。
+        </p>
+
+        <h2>技术栈</h2>
+        <ul>
+            <li><strong>硬件端 (Atlas开发板):</strong> 负责运行实时手势识别。</li>
+            <li><strong>计算机视觉 (MediaPipe):</strong> 从摄像头视频流中精准捕捉并解析手部关键点。</li>
+            <li><strong>通信 (WebSocket):</strong> 在开发板和浏览器之间建立低延迟、双向的通信桥梁，传输控制指令。</li>
+            <li><strong>前端渲染 (Three.js):</strong> 在浏览器中构建和渲染一个轻量级的3D世界，并接收指令来驱动机器人。</li>
+        </ul>
+
+        <h2>工作流程</h2>
+        <ol>
+            <li>摄像头在Atlas开发板上捕捉您的手势。</li>
+            <li>MediaPipe库实时处理图像，将手势转换为"前进"、"左转"等指令。</li>
+            <li>这些指令通过WebSocket服务发送到您的电脑。</li>
+            <li>浏览器中的Three.js场景接收到指令，并控制3D机器人的相应动作。</li>
+        </ol>
+
+        <a href="index.html" class="back-button">返回3D场景</a>
+    </div>
+</body>
+</html>

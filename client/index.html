@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Robot Gesture Controller</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 3D场景容器 -->
+    <div id="scene-container"></div>
+    
+    <!-- 游戏信息HUD (Heads-Up Display) -->
+    <div id="hud">
+        <p>Score: <span id="score-display">0</span></p>
+        <p>Time Left: <span id="timer-display">15.0</span></p>
+    </div>
+
+    <!-- 新增：雷达图画布 -->
+    <canvas id="radar-canvas" width="150" height="150"></canvas>
+
+    <!-- 手势指令提示 (原info div) -->
+    <div id="info">
+        <p id="connection-status">Connecting to Atlas board...</p>
+        <p>Last command: <span id="command-display">None</span></p>
+    </div>
+
+    <!-- 游戏结束覆盖层 (默认隐藏) -->
+    <div id="game-over-screen">
+        <div class="game-over-box">
+            <h1>Game Over</h1>
+            <p>Final Score: <span id="final-score-display">0</span></p>
+            <button id="restart-button">Restart Game</button>
+        </div>
+    </div>
+
+    <!-- 
+      引入Three.js库。
+      我们使用ES Module Shims来支持在浏览器中直接使用'import'语法加载模块，
+      这使得开发体验更现代化。
+    -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+    }
+    </script>
+
+    <!-- 引入我们的主程序脚本，注意 type="module" -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

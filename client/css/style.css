@@ -1,0 +1,120 @@
+/* css/style.css */
+
+/* 移除浏览器默认的边距和内边距 */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 防止出现滚动条 */
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+/* 场景容器样式 */
+#scene-container {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+/* 指令提示框位置调整到右上角 */
+#info {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* 改为 right */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #fff;
+    text-align: right;
+}
+
+/* 新增：游戏HUD样式 */
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#hud p {
+    margin: 5px 0;
+}
+
+#timer-display {
+    color: #ffc107; /* 醒目的黄色 */
+}
+
+/* 新增：游戏结束覆盖层样式 */
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none; /* 默认隐藏，通过JS控制显示 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+.game-over-box {
+    background-color: rgba(40, 40, 40, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.game-over-box h1 {
+    font-size: 4em;
+    margin: 0;
+    color: #dc3545; /* 红色 */
+}
+
+.game-over-box p {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#restart-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745; /* 绿色 */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+    background-color: #218838;
+}
+
+#info p {
+    margin: 5px 0;
+}
+
+#command-display {
+    font-weight: bold;
+    color: #00ffdd;
+}
+
+#radar-canvas {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 20, 0, 0.6); /* 深绿色半透明背景 */
+    border-radius: 50%; /* 圆形 */
+    border: 2px solid rgba(0, 255, 0, 0.5); /* 经典的绿色边框 */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
